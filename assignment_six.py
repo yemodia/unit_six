@@ -14,12 +14,11 @@ def birthday_lists():
 
 
 def duplicate_birthdays(birthdays):
-
     check_birthdays = set(birthdays)
     if len(check_birthdays) < len(birthdays):
-        print("Found duplicates")
+        return True
     else:
-        print("no duplicates")
+       return False
 
 
 
@@ -27,6 +26,13 @@ def duplicate_birthdays(birthdays):
 def main():
     birthday_check = birthday_lists()
     duplicate_birthdays(birthday_check)
+    birthday_match = 0
+    if duplicate_birthdays == True:
+        birthday_match += 1
+    elif duplicate_birthdays == False:
+        print("There were no matches")
+    print(birthday_match)
+
 
 
 main()
